@@ -5,13 +5,13 @@
 
 .nav{
     background-color: #0033A0;
-    max-height: 100px;
+    max-height: 110px;
 }
 
 .nav > img{
     height: 80px;
     width: 80px;
-    margin: 10px;
+    margin: 20px;
     margin-right: auto;
 }
 .nav > ul{
