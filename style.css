@@ -1,36 +1,35 @@
-.baruch{
-    padding:30px 10px;
-    border:1px solid lightgray;
-     display: flex;
-     text-decoration: none;
-     background-position: center;
-     background-image: url("Baruch.jpg");
-     max-width:1000px;
-     border-radius:15px;
-     margin-bottom:10px;
-    }
-
-
-.college-name{
-    text-decoration:none;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 20px;
-    height: 150px;
-    width: 200px;
-}
-.baruch h2{
-    font-size:50px;
-}
-
 .colleges {
-    margin:2%;
     display: flex;
     flex-direction: column;
     align-items:center;
+    max-width: 1300px;
 }
 
-.recentEvent{
-    backdrop-filter:blur(10px);
+.Baruch{
+    height: 60%;
+    width: 80%;
+    display: flex;
+    background-image: url("Baruch.jpg");
+    margin: 10px 10px 20px 10px;
+    padding:50px;
+    background-position: center;
+    border-radius:25px; 
+    justify-content: center;
 }
 
+.collegeName{
+    border: 1px lightgray solid;
+    font-weight: bold;
+    font-size:35px;
+    backdrop-filter: blur(10px);
+    color:white;
+    padding:10px 20px 10px 20px;
+    text-align: center;
+    justify-content: center;
+    font-family: Georgia;
+}
+
+a:hover, a:visited, a:link
+{
+    text-decoration: none;
+}
