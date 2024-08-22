@@ -8,9 +8,14 @@
 .nav{
     background-color: #0033A0;
     max-height: 120px;
+    width: 100%;
+    position:fixed;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    top:0;
+    overflow: hidden;
+    z-index: 100;
 }
 
 .nav > img{
@@ -40,4 +45,9 @@
 
 .nav ul li a:hover {
     background-color: #004bb5;
+}
+
+body{
+    margin-top: 10%;
+    display: block;
 }
