@@ -4,19 +4,29 @@
     max-width: 1200px;
     width: 100%;
     display: block;
-    
 }
 
-.Baruch{
+.Campus{
     height: 60%;
     width: 80%;
     display: flex;
-    background-image: url("Baruch.jpg");
     margin: 20px 10px 20px 10px;
     padding:50px;
     background-position: center;
     border-radius:25px; 
     justify-content: center;
+}
+
+.Baruch{
+    background-image: url("Baruch.jpg");
+}
+
+.JohnJay{
+    background-image: url("John-jay.jpg");
+}
+
+.York{
+    background-image: url("York.png");
 }
 
 .colleges a{
