@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    font-family: Georgia, sans-serif;
+}
+
+.nav{
+    background-color: #0033A0;
+    max-height: 110px;
+}
+
+.nav > img{
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+    margin-right: auto;
+}
+.nav > ul{
+    list-style-type: none;
+    display: flex;
+    justify-content:space-between;
+    gap: 100px;
+    align-items: end;
+    color: white;
+    font-size: 1.25rem;
+    margin-right: 100px;
+}
+
+.nav ul li a{
+    border-radius: 25px;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+
+}
+
+.nav ul li a:hover {
+    background-color: #004bb5;
+}
