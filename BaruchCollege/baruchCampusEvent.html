@@ -12,7 +12,7 @@
     <style>
       *{
         box-sizing: border-box;
-          font-family: Georgia, sans-serif;
+        font-family: Georgia, sans-serif;
       }
 
       .nav{
@@ -48,6 +48,51 @@
       .nav ul li a:hover {
         background-color: #004bb5;
       }
+
+      .event{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 60px;
+        margin: 30px 0% 30px 15%;
+      }
+
+      #myCarousel{
+        width: 800px;
+        height: 400px;
+        grid-column: 1/3;
+        grid-row: 1/2;
+        border-radius: 15px;
+      }
+
+      .carousel-inner > .carousal-item > img {
+        width:800px;
+        height:400px;
+      }
+
+      .otherEvent{
+        background-color:#B0C4DE;
+        grid-column: 1/3;
+        grid-row: 2/3;
+        border-radius: 15px;
+      }
+
+      .sideEvent{
+        background-color:#B0C4DE;
+        grid-column: 3/4;
+        grid-row: 1/3;
+        border-radius: 15px;
+      }
+
+      #news{
+        text-align: center;
+        margin: 10px;
+      }
+
+      .listOfNews > ul > li{
+        padding: 10px;
+      }
+
     </style>
   </head>
   <body>
@@ -62,21 +107,37 @@
       </ul>
     </div>
     
-    <div class="header">
-        <header></header>
-    </div>
-    <div class="body">
-        <div class="event">
-            <div class="Carousel">
-                
-            </div>
-            <div class="OtherEvent">
+    <div class="event">
 
-            </div>
+      <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousal-item active">
+            <img calss="d-block w-100" src="/Baruch.jpg" alt="First Image">
+          </div>
+          <div class="carousal-item">
+            <img calss="d-block w-100" src="/Baruch.jpg" alt="Second Image" >
+          </div>
+          <div class="carousal-item">
+            <img classs="d-block w-100" src="/Baruch.jpg" alt="Third Image">
+          </div>
         </div>
-        <div class="sideEvent">
+      </div>
 
+      <div class="otherEvent">
+
+      </div>
+      
+      <div class="sideEvent">
+        <h2 id="news">News</h2>
+        <div class="listOfNews">
+          <ul>
+            <li>FAFSA is due soon</li>
+            <li>Book Advance is coming soon</li>
+            <li>Graduation Completion Form</li>
+            <li>Badiminton court is reopening</li>
+          </ul>
         </div>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->
