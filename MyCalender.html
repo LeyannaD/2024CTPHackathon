@@ -1,44 +1,207 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calendar - Baruch College</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Light blue background */
+        }
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        .header {
+            background-color: #0033A0;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <div class="nav">
-        <img src="" alt="" class="baruchblgo">
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
+        .logo {
+            width: 120px;
+            margin-bottom: 10px;
+        }
 
-    <div class="body">
-        <header class="month"></header>
-        <div class="calender">
-            <div class="date"></div>
-            <div class="date"></div>
-            <div class="date"></div>
-            <div class="date"></div>
-            <div class="date"></div>
-            <div class="date"></div>
-            <div class="date"></div>
+        .title h1 {
+            font-family: 'Georgia', serif;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 20px 0 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            background-color: #004bb5;
+        }
+
+        .calendar {
+            width: 90%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #bed2e6; /* Complementary light grayish-blue color */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .calendar h2 {
+            text-align: center;
+            font-size: 28px;
+            font-family: 'Georgia', cursive; /* Beautiful cursive font */
+            color: #004b60; /* Nice blue color */
+            margin-bottom: 30px;
+        }
+
+        .days-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .day {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ecf1f4; /* White background for each day block */
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .day:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 18px;
+            color: #0033A0;
+            margin-bottom: 15px;
+        }
+
+        .event {
+            padding: 10px;
+            background-color: #c4cad3; /* Light blue background for events */
+            border-left: 4px solid #40e0d0;
+            border-radius: 8px;
+            font-size: 15px;
+            color: #007b9e;
+            margin-bottom: 10px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        .event:hover {
+            background-color: #d1f0ff;
+            color: #005f73;
+        }
+
+        .event-title {
+            font-weight: bold;
+            color: #007b9e;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://www.baruch.cuny.edu/images/homepage/baruch_logo.png" alt="Baruch College Logo" class="logo">
+        <div class="title">
+            <h1>Baruch College</h1>
         </div>
+        <nav>
+            <ul>
+                <li><a href="#">CUNY</a></li>
+                <li><a href="#">Campus Events</a></li>
+                <li><a href="#">Supports</a></li>
+                <li><a href="#">Club Activities</a></li>
+                <li><a href="#">My Calendar</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="calendar">
+        <h2>August</h2>
+        <div id="calendar" class="days-container"></div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+    <script>
+        const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const calendar = document.getElementById('calendar');
+
+        function generateCalendar() {
+            const today = new Date();
+            const startOfWeek = new Date(today);
+            startOfWeek.setDate(today.getDate() - today.getDay());
+
+            const events = [
+                ["Meeting with advisor", "Math Club event"],
+                ["Project deadline", "Lunch with friends"],
+                ["Physics lecture"],
+                ["Team presentation", "Study group"],
+                ["Basketball game"],
+                ["Library study session"],
+                ["Family dinner"]
+            ];
+
+            const eventLinks = [
+                ["#advisor", "#math-club"],
+                ["#deadline", "#lunch"],
+                ["#lecture"],
+                ["#presentation", "#study-group"],
+                ["#basketball"],
+                ["#library"],
+                ["#dinner"]
+            ];
+
+            for (let i = 0; i < 7; i++) {
+                const day = new Date(startOfWeek);
+                day.setDate(startOfWeek.getDate() + i);
+                const dayName = daysOfWeek[day.getDay()];
+                const dayDate = `${day.getMonth() + 1}/${day.getDate()}`;
+
+                const dayDiv = document.createElement('div');
+                dayDiv.className = 'day';
+                dayDiv.innerHTML = `
+                    <div class="day-header">
+                        <span>${dayName}</span>
+                        <span>${dayDate}</span>
+                    </div>
+                `;
+
+                events[i].forEach((event, index) => {
+                    const eventDiv = document.createElement('a');
+                    eventDiv.href = eventLinks[i][index];
+                    eventDiv.className = 'event';
+                    eventDiv.innerHTML = `<div class="event-title">${event}</div>`;
+                    dayDiv.appendChild(eventDiv);
+                });
+
+                calendar.appendChild(dayDiv);
+            }
+        }
+
+        generateCalendar();
+    </script>
+</body>
 </html>
