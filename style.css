@@ -33,3 +33,27 @@
 .recentEvent{
     backdrop-filter:blur(10px);
 }
+
+.nav > img{
+    height: 100px;
+    width: 100px;
+    margin-right: 30px;
+}
+.nav > ul{
+    list-style-type: none;
+    display: flex;
+    justify-content:center;
+    gap: 40px;
+    align-items: end;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.row--cards{
+    margin:20px;
+    border-radius: 10px;
+}
+
+.card{
+    padding: 20px;
+}
