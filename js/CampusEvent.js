@@ -14,7 +14,7 @@
   const BARUCHButton = document.getElementById("BARUCH");
 
 
-  // BARUCHButton.addEventListener("click",LoadCarousel());
+  BARUCHButton.addEventListener("click",LoadCarousel());
 
 
 
@@ -71,11 +71,3 @@ function LoadCarousel() {
       })
     })
     }
-    <div class="carousel-item carousel-1 active">
-                    <img class="d-block w-100" src="carselIMG/Designer.png" alt="First slide">
-                    <div class="carousel-caption d-none d-md-block">
-                      <h5>CS Career Fair on 8/23</h5>
-                      <p>2:00PM - 4:00PM</p>
-                    </div>
-                  </div>
-
