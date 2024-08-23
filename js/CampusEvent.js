@@ -46,17 +46,16 @@ function LoadCarousel() {
   
         var CarselItem = document.createElement("div");
         CarselItem.classList.add("carousel-item");
-        var CarselIMG = firebase.storage().ref(imageURL); 
-        
-        EventImage.src = CarselIMG;
-        EventImage.classList.add("d-block");
-        EventImage.classList.add("w-100");
+
         var EventDetail = document.createElement("div");
-        EventDetail.classList.add("carousel-caption","d-none","d-md-block");
+        EventDetail.classList.add("carousel-caption");
+        EventDetail.classList.add("d-none");
+        EventDetail.classList.add("d-md-block");
+
         var EventTitle = document.createElement("h5");
         EventTitle.append(CarouselEvent.EventTitle);
-        var EventDetail = document.createElement("p");
-        var EventTime = String(CarouselEvent.TimeStart) + " - " + String(CarouselEvent.TimeEnd);
+        var EventTime = document.createElement("p");
+        EventTime.append(CarouselEvent.TimeStart + " - " + CarouselEvent.TimeEnd);
 
         if(carselID == 1){
           CarselItem.classList.add("active");
