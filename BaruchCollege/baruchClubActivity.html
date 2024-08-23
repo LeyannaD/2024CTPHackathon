@@ -30,13 +30,13 @@
       
       .eventPoster { 
         flex: 1; /* Allow the poster to take up equal space */ 
-        max-width: 300px; /* Adjust as needed */ 
+        max-width: 300px; 
         margin-right: 20px; /* Space between poster and info */ 
       } 
       .eventPoster > img {
         width: 100%; 
         height: auto;  
-        border-radius: 10px; 
+         border-radius: 5px;  
       } 
       .eventInfo { 
         flex: 2; /* Allow event info to take up more space */ 
@@ -44,15 +44,21 @@
         flex-direction: column; 
         justify-content: center; 
       } 
-      .eventTitle { 
+       .EventTitle { 
+        border-radius: 15px; 
+        border: 2px solid black;
         font-size: 30px; 
         font-weight: bold; 
-        margin-bottom: 10px; 
+        margin-bottom: 15px; 
         color: black;
+        text-align: center;
       }
-      .eventDescription { 
+      .EventDescription { 
         font-size: 18px; 
-        color: #666; 
+        color: #000000; 
+        border: 2px solid black;
+        border-radius: 15px;
+        padding: 10px;
       }
       </style>
   </head>
@@ -80,7 +86,7 @@
         </div>
         <div class="clubEvent">
             <div class="eventPoster">
-              <!-- Insert image -->
+              <img src="carselIMG/WIClub.jpg"/>
             </div>
             <div class="eventInfo">
                 <div class="EventTitle">West Indian Culture Club </div>
@@ -89,13 +95,22 @@
         </div>
         <div class="clubEvent">
           <div class="eventPoster">
-            <!-- Insert image -->
+            <img src="carselIMG/1477645_633625286679571_1349573694_n.jpg"/>
           </div>
           <div class="eventInfo">
               <div class="EventTitle">Archery Club </div>
               <div class="EventDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
           </div>
       </div>
+      <div class="clubEvent">
+        <div class="eventPoster">
+          <img src="carselIMG/biomed.jpg"/>
+        </div>
+        <div class="eventInfo">
+            <div class="EventTitle">BioMed Society</div>
+            <div class="EventDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+        </div>
+    </div>
     </div>
 
     
