@@ -39,27 +39,63 @@
          border-radius: 5px;  
       } 
       .eventInfo { 
-        flex: 2; /* Allow event info to take up more space */ 
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center; 
-      } 
-       .EventTitle { 
-        border-radius: 15px; 
-        border: 2px solid black;
-        font-size: 30px; 
-        font-weight: bold; 
-        margin-bottom: 15px; 
-        color: black;
-        text-align: center;
+      flex: 2; 
+      display: flex; 
+      flex-direction: column; 
+      justify-content: flex-start; /* Align content to the top */
       }
-      .EventDescription { 
-        font-size: 18px; 
-        color: #000000; 
-        border: 2px solid black;
-        border-radius: 15px;
-        padding: 10px;
-      }
+
+    .EventTitle { 
+      border-radius: 15px; 
+      border: 2px solid black;
+      font-size: 30px; 
+      font-weight: bold; 
+      margin-bottom: 15px; 
+      margin-top: 0;
+      margin-left: 0; /* Remove left margin */
+      color: black;
+      text-align: left;
+      padding-left: 0; /* Remove any left padding */
+    }
+
+    .EventDescription { 
+      font-size: 18px; 
+      color: #000000; 
+      border: 2px solid black;
+      border-radius: 15px;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .button {
+    background: linear-gradient(135deg, #004080, #1e90ff); 
+    color: white; 
+    border: none; 
+    border-radius: 50px; 
+    padding: 12px 24px; 
+    text-align: center;
+    display: block; /* Make the button a block-level element */
+    font-size: 18px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    width: 500px;
+    margin: 0 auto; /* Center the button horizontally */
+  }
+
+
+    .button:hover {
+      background: linear-gradient(135deg, #1e90ff, #004080); /* Reverse gradient on hover */
+      transform: translateY(-3px); /* Lift button on hover */
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); 
+    }
+
+    .button:active {
+      transform: translateY(1px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+    }
+
+
       </style>
   </head>
   <body>
@@ -77,38 +113,42 @@
     <div class="body">
         <div class="clubEvent">
             <div class="eventPoster">
-              <img src="carselIMG/japanclub.jpg"/>
+              <img src="carselIMG/hackatonEvent.png"/>
             </div>
             <div class="eventInfo">
-                <div class="EventTitle"> Japan Club </div>
-                <div class="EventDescription"> Japan Club is focused on providing significant opportunities for Baruch College students, Japanese and Non-Japanese students alike, with two focuses: The organization aims to aid Japanese students and those interested in working in Japanese companies or in fields dealing with Japan markets in communication and building relationships so as to assist them in the job-hunting process. Japan Club does this by organizing Career Forum Workshops, for those with business proficiency level in Japanese that are preparing to attend job interviews, networking receptions, or events such as Boston Career Forum. We organize Networking Events with various Japanese and American Companies, and collaborating with other organizations on campus holding events to assist in professional development. The organization is also aimed at promoting Japanese cultural-awareness. By utilizing our network with clubs on campus, other Japan Clubs in other Universities, outside Japanese organizations such as Japan Society and Resobox to our close ties with the Consulate General of Japan in New York, the organization strives to not only assist those who would like to gain work experience with companies related to Japan but also to provide opportunities to experience the beauty and depth of Japan and its people. Japan Club does this by organizing events such as: Japanese Conversation Classes (where students can practice Japanese at a beginner, intermediate, or advanced level), Food Day events (dedicated to educating and celebrating the delicious beauty of Japanese cuisine), Travel Seminars (for those interested to traveling to Japan either to Study Abroad, gain fluency in Japanese, or enjoy its culture), and even a Japanese-American performing arts showcase (“West Meets East Matsuri”) as well as many other events dedicated to celebrating its culture and authenticity. </div>
+              <div class="EventTitle"> Hackathon Weekend </div>
+              <div class="EventDescription"> Computer Science Club presents a 48-hour coding marathon where students collaborate in teams to create innovative tech solutions. Participants can work on projects ranging from web apps to mobile games. The event typically includes workshops, mentorship from industry professionals, and prizes for the best projects. It's a great way to apply coding skills in a competitive and fun environment. </div>
+              <button class= "button" type="button">Add to Calender</button>
             </div>
         </div>
         <div class="clubEvent">
             <div class="eventPoster">
-              <img src="carselIMG/WIClub.jpg"/>
+              <img src="carselIMG/animeClub.png"/>
             </div>
             <div class="eventInfo">
-                <div class="EventTitle">West Indian Culture Club </div>
-                <div class="EventDescription"> The West Indian Culture Club (WICC) is a workshop which was formed in 1974 to promote West Indian culture, not only at Baruch College, but on the North American continent. Our workshop consists of multi-talented students not only from the various West Indian islands but from other parts of the globe. However, our common goal remains — to promote the West Indian culture and to bridge the gap that exists between other cultures and our own. We present to the Baruch community different aspects of the West Indian culture through various media: films, speakers, fashion shows, dance of the various islands, arts and crafts exhibitions. All are welcome to participate. </div>
+              <div class="EventTitle">Anime Marathon Night </div>
+              <div class="EventDescription"> Anime Club is holding a fun, social event where club members gather to watch a selection of anime series or movies. The marathon might be themed around a specific genre, like fantasy or mecha, or feature a popular series. Snacks and refreshments are usually provided, and there might be discussions or trivia games during breaks.</div>
+              <button class= "button" type="button">Add to Calender</button>
             </div>
         </div>
         <div class="clubEvent">
           <div class="eventPoster">
-            <img src="carselIMG/1477645_633625286679571_1349573694_n.jpg"/>
+            <img src="carselIMG/foodevent.png"/>
           </div>
           <div class="eventInfo">
-              <div class="EventTitle">Archery Club </div>
-              <div class="EventDescription"> The purpose of the Archery Club is to perpetuate, foster and direct the sport of archery. We want to make this popular, but unfortunately not easily accessible, sport available to the Baruch community. Experience is not required. Both equipment and coaching will be provided free of charge. We participate in local and national competitions. Our practice sessions have both a lively social and competitive atmosphere.</div>
+            <div class="EventTitle">International Food Festival </div>
+            <div class="EventDescription"> A vibrant event organized by the Cultural Club where students from diverse backgrounds share traditional dishes from their home countries. The festival includes food tasting, cultural performances, and showcases of traditional clothing and music. It’s a great opportunity for students to experience different cultures, try new foods, and celebrate diversity on campus.</div>
+            <button class= "button" type="button">Add to Calender</button>
           </div>
       </div>
       <div class="clubEvent">
         <div class="eventPoster">
-          <img src="carselIMG/biomed.jpg"/>
+          <img src="carselIMG/cleanup.png"/>
         </div>
         <div class="eventInfo">
-            <div class="EventTitle">BioMed Society</div>
-            <div class="EventDescription"> The BioMed Society is an organization composed of natural science majors, future healthcare professionals, and those interested in science.</div>
+          <div class="EventTitle">Campus Clean-Up Day</div>
+          <div class="EventDescription"> An event where members of the Environmental Club come together to clean up the campus or nearby community areas. Participants pick up litter, plant trees, and engage in activities that promote sustainability. The event often includes educational sessions on recycling, composting, and reducing waste, aiming to raise awareness about environmental issues.</div>
+          <button class= "button" type="button">Add to Calender</button>
         </div>
     </div>
     </div>
