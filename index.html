@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/Support.css">
     <link rel="stylesheet" href="css/Calender.css">
+    <link rel="stylesheet" href="css/ClubActivity.css">
     <title>CUNY Homepage</title>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.13/firebase-app-compat.js"></script>
@@ -79,7 +80,7 @@
         </div>
           
         <div class="event" id="CampusEvent">
-              <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -96,9 +97,8 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="sr-only">Next</span>
                 </a>
-              </div>
-      
-            
+            </div>
+    
             <div class="otherEvent">
               <a class="" data-toggle="modal" data-target="#exampleModal">
                 <div class="card mb-3" style="max-width: 100%; margin:2%;">
@@ -229,6 +229,7 @@
                 </div>
             </div>
         </div>
+
         <div class="hide" id="CALENDER">
           <div class="Calenderbody">
             <div class="calendar">
@@ -237,12 +238,57 @@
             </div>
           </div>
         </div>
+
+        <div class="hide" id="CLUBACTIVITY">
+          <div class="body">
+            <div class="clubEvent">
+                <div class="eventPoster">
+                  <img src="carselIMG/hackatonEvent.png" alt="EventImage">
+                </div>
+                <div class="eventInfo">
+                  <div class="EventTitle"> Hackathon Weekend </div>
+                  <div class="EventDescription"> Computer Science Club presents a 48-hour coding marathon where students collaborate in teams to create innovative tech solutions. Participants can work on projects ranging from web apps to mobile games. The event typically includes workshops, mentorship from industry professionals, and prizes for the best projects. It's a great way to apply coding skills in a competitive and fun environment. </div>
+                  <button class= "button" type="button">Add to Calender</button>
+                </div>
+            </div>
+            <div class="clubEvent">
+                <div class="eventPoster">
+                  <img src="carselIMG/animeClub.png" alt="EventImage">
+                </div>
+                <div class="eventInfo">
+                  <div class="EventTitle">Anime Marathon Night </div>
+                  <div class="EventDescription"> Anime Club is holding a fun, social event where club members gather to watch a selection of anime series or movies. The marathon might be themed around a specific genre, like fantasy or mecha, or feature a popular series. Snacks and refreshments are usually provided, and there might be discussions or trivia games during breaks.</div>
+                  <button class= "button" type="button">Add to Calender</button>
+                </div>
+            </div>
+            <div class="clubEvent">
+              <div class="eventPoster">
+                <img src="carselIMG/foodevent.png" alt="EventImage">
+              </div>
+              <div class="eventInfo">
+                <div class="EventTitle">International Food Festival </div>
+                <div class="EventDescription"> A vibrant event organized by the Cultural Club where students from diverse backgrounds share traditional dishes from their home countries. The festival includes food tasting, cultural performances, and showcases of traditional clothing and music. It’s a great opportunity for students to experience different cultures, try new foods, and celebrate diversity on campus.</div>
+                <button class= "button" type="button">Add to Calender</button>
+              </div>
+            </div>
+            <div class="clubEvent">
+            <div class="eventPoster">
+              <img src="carselIMG/cleanup.png" alt="EventImage">
+            </div>
+            <div class="eventInfo">
+              <div class="EventTitle">Campus Clean-Up Day</div>
+              <div class="EventDescription"> An event where members of the Environmental Club come together to clean up the campus or nearby community areas. Participants pick up litter, plant trees, and engage in activities that promote sustainability. The event often includes educational sessions on recycling, composting, and reducing waste, aiming to raise awareness about environmental issues.</div>
+              <button class= "button" type="button">Add to Calender</button>
+            </div>
+            </div>
+          </div>    
+        </div>
         
     </div>
 
 
 
-    
+
     <div class="modal fade modal-dialog modal-dialog-centered" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
