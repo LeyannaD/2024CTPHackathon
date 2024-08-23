@@ -25,6 +25,7 @@
     margin-right: auto;
     align-items: center;
 }
+
 .nav > ul{
     list-style-type: none;
     display: flex;

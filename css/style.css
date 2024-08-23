@@ -18,15 +18,15 @@
 }
 
 .Baruch{
-    background-image: url("Baruch.jpg");
+    background-image: url("../Baruch.jpg");
 }
 
 .JohnJay{
-    background-image: url("John-jay.jpg");
+    background-image: url("../John-jay.jpg");
 }
 
 .York{
-    background-image: url("York.png");
+    background-image: url("../York.png");
 }
 
 .colleges a{
@@ -58,6 +58,6 @@ a:hover, a:visited, a:link
     text-decoration: none;
 }
 
-.shrinkImg{
-
+.hide{
+    display:none;
 }

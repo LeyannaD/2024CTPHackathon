@@ -1,26 +1,6 @@
 
-      
-  // Import the functions you need from the SDKs you need
-
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyDdSevJ5ZmYWDu5pkccpEFWjRyTnDv3blM",
-    authDomain: "ctphackathon-cunynews.firebaseapp.com",
-    projectId: "ctphackathon-cunynews",
-    storageBucket: "ctphackathon-cunynews.appspot.com",
-    messagingSenderId: "183597557455",
-    appId: "1:183597557455:web:f36127597594b3a64f39ba",
-    measurementId: "G-R5CJLY65FX"
-  };
-
   // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  const db = firebase.firestore();
+
 
   const CampusEventCarousel = document.querySelector(".carousel-inner");
 
