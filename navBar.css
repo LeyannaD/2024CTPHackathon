@@ -1,11 +1,21 @@
 *{
     box-sizing: border-box;
     font-family: Georgia, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .nav{
     background-color: #0033A0;
-    max-height: 110px;
+    max-height: 120px;
+    width: 100%;
+    position:fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    top:0;
+    overflow: hidden;
+    z-index: 100;
 }
 
 .nav > img{
@@ -13,13 +23,13 @@
     width: 80px;
     margin: 20px;
     margin-right: auto;
+    align-items: center;
 }
 .nav > ul{
     list-style-type: none;
     display: flex;
     justify-content:space-between;
     gap: 100px;
-    align-items: end;
     color: white;
     font-size: 1.25rem;
     margin-right: 100px;
@@ -31,9 +41,13 @@
     color: white;
     text-decoration: none;
     transition: background-color 0.3s ease-in-out;
-
 }
 
 .nav ul li a:hover {
     background-color: #004bb5;
+}
+
+body{
+    margin-top: 10%;
+    display: block;
 }
