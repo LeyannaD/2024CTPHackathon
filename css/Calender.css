@@ -1,0 +1,75 @@
+.Calenderbody {
+    font-family: Georgia, sans-serif;
+    background-color: #ffffff; /* Light blue background */
+}
+
+.calendar {
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #bed2e6; /* Complementary light grayish-blue color */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar h2 {
+    text-align: center;
+    font-size: 28px;
+    font-family: 'Georgia', cursive; /* Beautiful cursive font */
+    color: #004b60; /* Nice blue color */
+    margin-bottom: 30px;
+}
+
+.days-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.day {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ecf1f4; /* White background for each day block */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.day:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 18px;
+    color: #0033A0;
+    margin-bottom: 15px;
+}
+
+.CalenderEvent {
+    padding: 10px;
+    background-color: #c4cad3; /* Light blue background for events */
+    border-left: 4px solid #40e0d0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #007b9e;
+    margin-bottom: 10px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.CalenderEvent:hover {
+    background-color: #d1f0ff;
+    color: #005f73;
+}
+
+.CalenderEvent-title {
+    font-weight: bold;
+    color: #007b9e;
+}

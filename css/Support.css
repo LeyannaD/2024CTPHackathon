@@ -1,0 +1,53 @@
+.row--cards{
+    margin:20px;
+    border-radius: 20px;
+    color: #050A30;
+}
+
+.info{
+    display: flex;
+    justify-self: space-between;
+    gap:50px;
+}
+
+.row--cards .card{
+    padding: 20px !important;
+    background-color: #F0F8FF !important;
+    box-shadow: 10px 5px 5px #4682B4 !important;
+}
+
+.dates{
+    background-color: #B0C4DE;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.description{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+.location{
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.row-date{
+    padding: 10px;
+    font-size: 1.25rem;
+}
+
+.btn-link{
+    cursor: pointer;
+}
+
+.btn a{
+    color: white;
+    text-decoration: none;
+}
+
+.btn:hover{
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+}
