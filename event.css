@@ -1,0 +1,74 @@
+.event{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 60px;
+    margin: 0% 3% 5% 3%;
+  }
+
+  .carousel{
+    grid-column: 1/3;
+    grid-row: 1/3;
+  }
+
+  .card-img{
+    grid-column: 1/3;
+    grid-row:1/3;
+  }
+
+  .otherEvent{
+    background-color:#B0C4DE;
+    grid-column: 1/3;
+    grid-row: 3/3;
+    border-radius: 15px;
+  }
+
+  .card-body{
+    color:black;
+  }
+
+  a:hover, a:visited, a:link
+  {
+    text-decoration: none;
+  }
+
+  .sideEvent{
+    background-color:#B0C4DE;
+    grid-column: 3/4;
+    grid-row: 1/3;
+    border-radius: 15px;
+    padding:15px;
+  }
+
+ .card, .card-header, .list-group-item{
+    background-color: #B0C4DE;
+    border: none;
+  }
+
+  .card-header{
+    background-color: #B0C4DE;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .list-group > li{
+    color: black;
+    font-size: 1.25rem;
+    padding: 5px;
+    margin: 10px;
+  }
+
+  .list-group-item > a{
+    color: black;
+    font-size: 1.25rem;
+  }
+  
+  .list-group > li:hover{
+    background-color: #E6E6FA;     
+    border-radius: 15px;
+    transform: translateY(-5px);
+    transition: transform 0.3s;
+  }
