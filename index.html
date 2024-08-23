@@ -11,7 +11,26 @@
     <link rel="stylesheet" href="css/navBar.css">
     <link rel="stylesheet" href="css/style.css">
     <title>CUNY Homepage</title>
-    <script type="module" src="./js/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13/firebase-installations-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13/firebase-storage-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13/firebase-database-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyDdSevJ5ZmYWDu5pkccpEFWjRyTnDv3blM",
+        authDomain: "ctphackathon-cunynews.firebaseapp.com",
+        databaseURL: "https://ctphackathon-cunynews-default-rtdb.firebaseio.com",
+        projectId: "ctphackathon-cunynews",
+        storageBucket: "ctphackathon-cunynews.appspot.com",
+        messagingSenderId: "183597557455",
+        appId: "1:183597557455:web:2d1f962e30d6dfc54f39ba",
+        measurementId: "G-L14QF14BH4"
+      };
+    </script>
+
   </head>
   <body>
 
@@ -22,7 +41,7 @@
 
         <div class="mx-auto container colleges">
             <div class="row">
-                <a class="Baruch Campus w-100" id="BARUCH"  onclick="goToCampus()">
+                <a class="Baruch Campus w-100" id="BARUCH"  onclick="goToCampus();">
                     <div class="collegeName">
                         <p>Baruch College</p>
                     </div>
@@ -64,8 +83,8 @@
                   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                   <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
                 </ol>
-                <div class="carousel-inner" onload="updateCarousel()">
-                  <!-- <div class="carousel-item carousel-1 active">
+                <div class="carousel-inner" onload="">
+                  <div class="carousel-item carousel-1 active">
                     <img class="d-block w-100" src="carselIMG/Designer.png" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
                       <h5>CS Career Fair on 8/23</h5>
@@ -85,7 +104,7 @@
                       <h5>CS Career Fair on 8/23</h5>
                       <p>2:00PM - 4:00PM</p>
                     </div>
-                  </div> -->
+                  </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
