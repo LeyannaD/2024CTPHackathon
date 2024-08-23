@@ -51,9 +51,37 @@
         padding:15px;
       }
 
+     .card, .card-header, .list-group-item{
+        background-color: #B0C4DE;
+        border: none;
+      }
 
-      .listOfNews > ul > li{
+      .card-header{
+        background-color: #B0C4DE;
+        font-size: 1.5rem;
+        font-weight: 600;
+        border: none;
         padding: 10px;
+        border-radius: 15px;
+      }
+
+      .list-group > li{
+        color: black;
+        font-size: 1.25rem;
+        padding: 5px;
+        margin: 10px;
+      }
+
+      .list-group-item > a{
+        color: black;
+        font-size: 1.25rem;
+      }
+
+      .list-group > li:hover{
+        background-color: #E6E6FA;
+        border-radius: 15px;
+        transform: translateY(-5px);
+        transition: transform 0.3s;
       }
 
     </style>
@@ -169,7 +197,7 @@
         <div class="card">
           <div class="card-header">What's New: </div>
           <div class="card-body">
-            <ul class="list-group list-group-flush ">
+            <ul class="list-group list-group-flush">
               <li class="list-group-item"><a href="">Don't forget to do your 2025 FAFSA!</a></li>
               <li class="list-group-item"><a href="">Fall Semester Begin 8/28!</a></li>
               <li class="list-group-item"><a href="">Student Government just opened application for Leadership Position!</a></li>
