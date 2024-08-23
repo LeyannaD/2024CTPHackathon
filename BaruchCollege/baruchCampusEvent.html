@@ -11,10 +11,10 @@
     <style>
       .event{
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 60px;
-        margin: 30px 0% 30px 15%;
+        margin: 0% 3% 5% 3%;
       }
 
       .carousel{
@@ -48,12 +48,9 @@
         grid-column: 3/4;
         grid-row: 1/3;
         border-radius: 15px;
+        padding:15px;
       }
 
-      #news{
-        text-align: center;
-        margin: 10px;
-      }
 
       .listOfNews > ul > li{
         padding: 10px;
@@ -169,14 +166,17 @@
       </div>
       
       <div class="sideEvent">
-        <h2 id="news">What's New</h2>
-        <div class="listOfNews">
-          <ul>
-            <li>FAFSA is due soon</li>
-            <li>Book Advance is coming soon</li>
-            <li>Graduation Completion Form</li>
-            <li>Badiminton court is reopening</li>
-          </ul>
+        <div class="card">
+          <div class="card-header">What's New: </div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush ">
+              <li class="list-group-item"><a href="">Don't forget to do your 2025 FAFSA!</a></li>
+              <li class="list-group-item"><a href="">Fall Semester Begin 8/28!</a></li>
+              <li class="list-group-item"><a href="">Student Government just opened application for Leadership Position!</a></li>
+              <li class="list-group-item"><a href="">Baruch Book Store reopen!</a></li>
+              <li class="list-group-item"><a href="">Badminton court is reopening!</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
