@@ -14,13 +14,19 @@ function goToCampus(school){
     CampusEvent.classList.remove("hide");
     if(school == 'Baruch'){
         CampusLogo.src = "img/BaruchLogo.png";
-        CampusNavbar.background="#0033A0";
+        CampusNavbar.classList.add("B")
+        CampusNavbar.classList.remove("JJ");
+        CampusNavbar.classList.remove("Y");
     } else if(school =="JohnJay"){
-        CampusLogo.src = "img/YorkLogo.png";
-        CampusNavbar.background="#0033A0";
-    } else if(school =="York"){
         CampusLogo.src = "img/JohnJayLogo.png";
-        CampusNavbar.background="#DAA520";
+        CampusNavbar.classList.add("JJ");
+        CampusNavbar.classList.remove("Y");
+        CampusNavbar.classList.remove("B");
+    } else if(school =="York"){
+        CampusLogo.src = "img/YorkLogo.png";
+        CampusNavbar.classList.add("Y");
+        CampusNavbar.classList.remove("B");
+        CampusNavbar.classList.remove("JJ");
     }
 }
 
