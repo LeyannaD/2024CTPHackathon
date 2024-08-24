@@ -44,3 +44,15 @@
   .listOfNews > ul > li{
     padding: 10px;
   }
+
+  .CardDiscription {
+    max-width: 80ch;
+    padding: 0px;
+  }
+  
+  .CardDiscription p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }

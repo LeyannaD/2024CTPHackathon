@@ -37,6 +37,41 @@
   </head>
   <body>
 
+    <div class="modal fade" id="EventModal" tabindex="-1" role="dialog" aria-labelledby="EventModal" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog modal-lg" style="min-width:90%;" role="document">
+        <div class="modal-content"> 
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Event Details</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card mb-3" style="max-width: 100%; margin:2%;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="img/Event1.png" alt="" class="img-fluid rounded-start">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Talk the Talk: Success through Classroom Participation</h5>
+                    <div class="card-text"><p>All students are encouraged to join Baruch's Tools for Clear Speech program (TfCS) as we explore how effective communication can lead to a deeper understanding of course material, help foster new friendships with classmates, and of course, help you earn better grades! We’ll also discuss how strategic group communication skills can enhance career opportunities. At the end of the session, we will show how multilingual learners of English can take advantage of free TfCS services to improve their communication skills, speaking confidence, and career readiness.</p></div>
+                    <p class="card-text text-muted">Thu Aug 29 2024 | 12:30PM – 2:00PM</p>
+                    <p class="card-text text-muted">BAR01 - B-14-240</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Add to my Calender</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="cuny" id="CUNYPAGE">
         <div class="nav">
             <img src="CUNY-LOGO.svg.png" alt="Baruch college logo" class="baruchlogo bg-white w-10">
@@ -44,21 +79,21 @@
 
         <div class="mx-auto container colleges">
             <div class="row">
-                <a class="Baruch Campus w-100" id="BARUCH"  onclick="goToCampus();">
+                <a class="Baruch Campus w-100" id="BARUCH"  onclick="goToCampus('Baruch');">
                     <div class="collegeName">
                         <p>Baruch College</p>
                     </div>
                 </a>
             </div>
             <div class="row">
-                <a class="JohnJay Campus w-100" href="./JohnJay/johnjayCampusEvent.html">
+                <a class="JohnJay Campus w-100" id="JOHNJAY" onclick="goToCampus('JohnJay')">
                     <div class="collegeName">
                         <p>John Jay College</p>
                     </div>
                 </a>
             </div>
             <div class="row">
-                <a class="York Campus w-100" href="./YorkCollege/yorkCampusEvent.html">
+                <a class="York Campus w-100" id="YORK" onclick="goToCampus('York')">
                     <div class="collegeName">
                         <p>York College</p>
                     </div>
@@ -68,8 +103,8 @@
     </div>
 
     <div class="hide" id="CAMPUSPAGE">
-        <div class="nav">
-            <img src="img/BaruchLogo.png" alt="Baruch college logo" class="logo">
+        <div class="nav" id="nav">
+            <img src="img/BaruchLogo.png" alt="College logo" class="logo" id="CampusLogo">
             <ul>
                 <li><a onclick="BackToCuny()">Cuny</a></li>
                 <li><a onclick="ShowCampusEvent()">Campus Events</a></li>
@@ -100,41 +135,6 @@
             </div>
     
             <div class="otherEvent">
-              <a class="" data-toggle="modal" data-target="#exampleModal">
-                <div class="card mb-3" style="max-width: 100%; margin:2%;">
-                  <div class="row g-0">
-                    <div class="col-md-4">
-                      <img src="carselIMG/Event1.png" alt="" class="img-fluid rounded-start">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">Talk the Talk: Success through Classroom Participation</h5>
-                        <p class="card-text text-truncate">All students are encouraged to join Baruch's Tools for Clear Speech program (TfCS) as we explore how effective communication can lead to a deeper understanding of course material, help foster new friendships with classmates, and of course, help you earn better grades! We’ll also discuss how strategic group communication skills can enhance career opportunities. At the end of the session, we will show how multilingual learners of English can take advantage of free TfCS services to improve their communication skills, speaking confidence, and career readiness.</p>
-                        <p class="card-text text-muted">Thu Aug 29 2024 | 12:30PM – 2:00PM</p>
-                        <p class="card-text text-muted">BAR01 - B-14-240</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a href="" class="">
-                <div class="card mb-3" style="max-width: 100%; margin:2%;">
-                  <div class="row g-0">
-                    <div class="col-md-4">
-                      <img src="carselIMG/Event1.png" alt="" class="img-fluid rounded-start">
-                    </div>
-                    <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">Talk the Talk: Success through Classroom Participation</h5>
-                        <p class="card-text text-truncate">All students are encouraged to join Baruch's Tools for Clear Speech program (TfCS) as we explore how effective communication can lead to a deeper understanding of course material, help foster new friendships with classmates, and of course, help you earn better grades! We’ll also discuss how strategic group communication skills can enhance career opportunities. At the end of the session, we will show how multilingual learners of English can take advantage of free TfCS services to improve their communication skills, speaking confidence, and career readiness.</p>
-                        <p class="card-text text-muted">Thu Aug 29 2024 | 12:30PM – 2:00PM</p>
-                        <p class="card-text text-muted">BAR01 - B-14-240</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </a>
-              <a href="" class="">
                 <div class="card mb-3" style="max-width: 100%; margin:2%;">
                   <div class="row g-0">
                     <div class="col-md-4">
@@ -143,14 +143,46 @@
                     <div class="col-md-8">
                       <div class="card-body">
                         <h5 class="card-title">Talk the Talk: Success through Classroom Participation</h5>
-                        <p class="card-text text-truncate">All students are encouraged to join Baruch's Tools for Clear Speech program (TfCS) as we explore how effective communication can lead to a deeper understanding of course material, help foster new friendships with classmates, and of course, help you earn better grades! We’ll also discuss how strategic group communication skills can enhance career opportunities. At the end of the session, we will show how multilingual learners of English can take advantage of free TfCS services to improve their communication skills, speaking confidence, and career readiness.</p>
+                        <div class="card-text CardDiscription"><p>All students are encouraged to join Baruch's Tools for Clear Speech program (TfCS) as we explore how effective communication can lead to a deeper understanding of course material, help foster new friendships with classmates, and of course, help you earn better grades! We’ll also discuss how strategic group communication skills can enhance career opportunities. At the end of the session, we will show how multilingual learners of English can take advantage of free TfCS services to improve their communication skills, speaking confidence, and career readiness.</p></div>
                         <p class="card-text text-muted">Thu Aug 29 2024 | 12:30PM – 2:00PM</p>
                         <p class="card-text text-muted">BAR01 - B-14-240</p>
+                        <button data-toggle="modal" data-target="#EventModal" class="btn btn-dark">Learn More</button>
                       </div>
                     </div>
                   </div>
                 </div>
-              </a>
+                <div class="card mb-3" style="max-width: 100%; margin:2%;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="img/Event1.png" alt="" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Talk the Talk: Success through Classroom Participation</h5>
+                        <div class="card-text CardDiscription"><p>All students are encouraged to join Baruch's Tools for Clear Speech program (TfCS) as we explore how effective communication can lead to a deeper understanding of course material, help foster new friendships with classmates, and of course, help you earn better grades! We’ll also discuss how strategic group communication skills can enhance career opportunities. At the end of the session, we will show how multilingual learners of English can take advantage of free TfCS services to improve their communication skills, speaking confidence, and career readiness.</p></div>
+                        <p class="card-text text-muted">Thu Aug 29 2024 | 12:30PM – 2:00PM</p>
+                        <p class="card-text text-muted">BAR01 - B-14-240</p>
+                        <button data-toggle="modal" data-target="#EventModal" class="btn btn-dark">Learn More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3" style="max-width: 100%; margin:2%;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="img/Event1.png" alt="" class="img-fluid rounded-start">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Talk the Talk: Success through Classroom Participation</h5>
+                        <div class="card-text CardDiscription"><p>All students are encouraged to join Baruch's Tools for Clear Speech program (TfCS) as we explore how effective communication can lead to a deeper understanding of course material, help foster new friendships with classmates, and of course, help you earn better grades! We’ll also discuss how strategic group communication skills can enhance career opportunities. At the end of the session, we will show how multilingual learners of English can take advantage of free TfCS services to improve their communication skills, speaking confidence, and career readiness.</p></div>
+                        <p class="card-text text-muted">Thu Aug 29 2024 | 12:30PM – 2:00PM</p>
+                        <p class="card-text text-muted">BAR01 - B-14-240</p>
+                        <button data-toggle="modal" data-target="#EventModal" class="btn btn-dark">Learn More</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
             
             <div class="sideEvent">
@@ -243,7 +275,7 @@
           <div class="body">
             <div class="clubEvent">
                 <div class="eventPoster">
-                  <img src="carselIMG/hackatonEvent.png" alt="EventImage">
+                  <img src="img/hackatonEvent.png" alt="EventImage">
                 </div>
                 <div class="eventInfo">
                   <div class="EventTitle"> Hackathon Weekend </div>
@@ -253,7 +285,7 @@
             </div>
             <div class="clubEvent">
                 <div class="eventPoster">
-                  <img src="carselIMG/animeClub.png" alt="EventImage">
+                  <img src="img/animeClub.png" alt="EventImage">
                 </div>
                 <div class="eventInfo">
                   <div class="EventTitle">Anime Marathon Night </div>
@@ -263,7 +295,7 @@
             </div>
             <div class="clubEvent">
               <div class="eventPoster">
-                <img src="carselIMG/foodevent.png" alt="EventImage">
+                <img src="img/foodevent.png" alt="EventImage">
               </div>
               <div class="eventInfo">
                 <div class="EventTitle">International Food Festival </div>
@@ -273,7 +305,7 @@
             </div>
             <div class="clubEvent">
             <div class="eventPoster">
-              <img src="carselIMG/cleanup.png" alt="EventImage">
+              <img src="img/cleanup.png" alt="EventImage">
             </div>
             <div class="eventInfo">
               <div class="EventTitle">Campus Clean-Up Day</div>
@@ -289,22 +321,10 @@
 
 
 
-    <div class="modal fade modal-dialog modal-dialog-centered" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            ...
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </div>
-      </div>
+
+
+
+
     </div>
 
 

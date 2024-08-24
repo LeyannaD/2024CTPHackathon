@@ -5,11 +5,23 @@ const CampusPage = document.getElementById("CampusEvent")
 const SupportPage = document.getElementById("SUPPORT");
 const CalenderPage = document.getElementById("CALENDER");
 const ClubPage = document.getElementById("CLUBACTIVITY");
+const CampusLogo = document.getElementById("CampusLogo");
+const CampusNavbar = document.getElementById("nav")
 
 
-function goToCampus(){
+function goToCampus(school){
     CunyCampusPage.classList.add("hide");
     CampusEvent.classList.remove("hide");
+    if(school == 'Baruch'){
+        CampusLogo.src = "img/BaruchLogo.png";
+        CampusNavbar.background="#0033A0";
+    } else if(school =="JohnJay"){
+        CampusLogo.src = "img/YorkLogo.png";
+        CampusNavbar.background="#0033A0";
+    } else if(school =="York"){
+        CampusLogo.src = "img/JohnJayLogo.png";
+        CampusNavbar.background="#DAA520";
+    }
 }
 
 function  BackToCuny(){
